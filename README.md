@@ -54,7 +54,7 @@ It's designed for developers, designers, and entrepreneurs who want to quickly p
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/PankajKumardev/Bolt-Clone.git
+   git clone https://github.com/Sohail52/MasyncAI.git
    cd bolt
    ```
 
