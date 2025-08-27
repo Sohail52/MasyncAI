@@ -1,11 +1,10 @@
-require('dotenv').config();
 import express from 'express';
 import cors from 'cors';
 import templateRoutes from './routes/template';
 import chatRoutes from './routes/chat';
-import { config } from './config/environment';
 
 const app = express();
+
 // SMART CORS - Uses environment variables
 const allowedOrigins = process.env.ALLOWED_ORIGINS
   ? process.env.ALLOWED_ORIGINS.split(',')
@@ -27,12 +26,12 @@ const corsOptions: cors.CorsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // preflight
 app.use(express.json());
 
 // Setup routes
 app.use('/template', templateRoutes);
 app.use('/chat', chatRoutes);
 
-app.listen(config.port, () => {
-  console.log(`Gemini server running on http://localhost:${config.port}`);
-});
+// For Vercel: export the Express app (no app.listen)
+export default app;
