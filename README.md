@@ -1,6 +1,5 @@
 # ⚡ MasyncAI - Transform Ideas into Websites
 
----
 
 ## 🌟 Overview
 
