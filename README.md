@@ -91,4 +91,3 @@ It's designed for developers, designers, and entrepreneurs who want to quickly p
      ```
 
 ---
-> Made with 💡 using React, Gemini, Express, and pure AI magic ✨
